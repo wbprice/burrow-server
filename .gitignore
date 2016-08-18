@@ -1,6 +1,6 @@
 .DS_STORE
 dist
-.tmp/*
+.tmp
 node_modules
 coverage
 npm-debug.log

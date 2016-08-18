@@ -22,7 +22,7 @@ class Thermostat extends Component {
 Thermostat.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
-  temperature: PropTypes.string
+  temperature: PropTypes.number
 }
 
 export default Thermostat
