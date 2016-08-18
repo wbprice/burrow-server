@@ -4,7 +4,10 @@ class Index extends Component {
 
   render() {
     return (
-      <h1>Server side rendering yo!</h1>
+      <section>
+        <h1>Server side rendering yo!</h1>
+        <p>Burrow is a tool for controlling the temperature in my house!</p>
+      </section>
     )
   }
 

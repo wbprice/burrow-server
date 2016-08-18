@@ -1,0 +1,16 @@
+@import "colors.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $paleryellow;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 3em;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+}

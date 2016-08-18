@@ -8,4 +8,8 @@ module.exports = class ViewController extends Controller {
     reply.view('Index')
   }
 
+  controls (request, reply) {
+    reply.view('Controls')
+  }
+
 }
