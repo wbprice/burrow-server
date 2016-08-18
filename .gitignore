@@ -1,2 +1,5 @@
+.DS_STORE
+dist
+.tmp
 node_modules
 coverage
