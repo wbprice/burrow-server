@@ -8,7 +8,16 @@ class Controls extends Component {
   render() {
     return (
       <section className={style.Controls}>
-        <Thermostat />
+        {this.props.thermostats.map((thermostat, index) => {
+
+          return (
+            <Thermostat
+              key={index}
+              name={thermostat.name}
+              temperature={thermostat.temperature}
+              id={thermostat.id} />
+          )
+        })}
       </section>
     )
   }
@@ -16,7 +25,7 @@ class Controls extends Component {
 }
 
 Controls.propTypes = {
-
+  thermostats: PropTypes.array
 }
 
 export default Controls

@@ -9,13 +9,20 @@ class Thermostat extends Component {
   render() {
     return (
       <section className={style.thermostatBody}>
-        <ThermostatForm />
+        <ThermostatForm
+          id={this.props.id}
+          name={this.props.name}
+          temperature={this.props.temperature} />
       </section>
     )
   }
 
 }
 
-Thermostat.propTypes = {}
+Thermostat.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  temperature: PropTypes.string
+}
 
 export default Thermostat
