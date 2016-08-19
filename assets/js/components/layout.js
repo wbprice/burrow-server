@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react'
 
-import 'normalize-css/normalize.css'
 import globalStyles from './../../styles/globals.scss'
 
 class Layout extends Component {
@@ -11,6 +10,7 @@ class Layout extends Component {
           <title>Remount Example</title>
           <link rel="stylesheet" href="/dist/styles/production.css" />
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+          <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" />
         </head>
         <body>
           <section className={globalStyles.container}>

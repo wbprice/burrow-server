@@ -9,7 +9,12 @@ module.exports = class ViewController extends Controller {
   }
 
   controls (request, reply) {
-    reply.view('Controls')
+
+    this.app.orm.Thermostat.findAll()
+    .then(thermostats => {
+      reply.view('Controls', {thermostats})
+    })
+
   }
 
 }

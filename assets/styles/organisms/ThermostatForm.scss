@@ -1,43 +1,59 @@
-.Form {
-  font-size: 1.25em;
+@import './../colors.scss';
+
+.form {
+  font-size: 1em;
   max-width: 12.5em;
   text-align: center;
 
   fieldset {
-    padding: 0;
-    border: 0;
-    color: white;
+    padding: .25em 0;
+    margin-bottom: .25em;
+    border: 2px solid $paleyellow;
+    color: $darkgray;
 
     input {
-      line-height: 1;
-      height: 1em;
+      line-height: .85;
+      height: .85em;
     }
 
   }
 
-}
-
-.Temperature {
-
-  position: relative;
-
-  .degree {
-    color: white;
-    font-size: 5em;
-    position: absolute;
-    top: .25em;
-    right: 0;
+  button {
+    background: $darkblue;
   }
 
-  input {
-    font-size: 8em;
-    width: 100%;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    color: white;
-    text-align: center;
-    padding: 0;
+  .temperature {
+
+    position: relative;
+
+    .degree {
+      font-size: 5em;
+      position: absolute;
+      top: .125em;
+      right: .075em;
+    }
+
+    input {
+      font-size: 8em;
+      width: 100%;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      text-align: center;
+      padding: 0;
+      font-weight: 700;
+      color: $darkblue;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+  }
+
+  .profile {
+    margin-bottom: 1em;
   }
 
 }

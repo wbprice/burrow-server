@@ -3,8 +3,8 @@
 
 const assert = require('assert')
 
-describe('AuthService', () => {
+describe('Thermostat Model', () => {
   it('should exist', () => {
-    assert(global.app.api.services['AuthService'])
+    assert(global.app.api.models['Thermostat'])
   })
 })

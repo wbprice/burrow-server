@@ -6,25 +6,17 @@ class ThermostatForm extends Component {
 
   render() {
     return (
-      <form className={style.Form} method="POST">
+      <form className={style.form} method="post" action={`/api/v1/thermostat/${this.props.id}`}>
 
-        <fieldset className={style.Temperature}>
+        <fieldset className={style.temperature}>
           <legend>Target Temperature</legend>
-          <input type="number" value="77" max="99" />
+          <input name="temperature" type="number" value={this.props.temperature} max="99" min="68" />
           <span className={style.degree}>&deg;</span>
         </fieldset>
 
-        <fieldset>
-          <legend>Climate Profile</legend>
-          <select>
-            <option>At Home</option>
-            <option>At Work</option>
-            <option>Sleeping</option>
-          </select>
-        </fieldset>
+        <h2>{this.props.name}</h2>
 
-        <button>
-        </button>
+        <button className="pure-button pure-button-primary">Update</button>
 
       </form>
     )
@@ -33,6 +25,10 @@ class ThermostatForm extends Component {
 
 }
 
-ThermostatForm.propTypes = {}
+ThermostatForm.propTypes = {
+  id: PropTypes.number,
+  temperature: PropTypes.string,
+  name: PropTypes.string
+}
 
 export default ThermostatForm
