@@ -7,7 +7,7 @@ class Layout extends Component {
     return (
       <html>
         <head>
-          <title>Remount Example</title>
+          <title>Burrow</title>
           <link rel="stylesheet" href="/dist/styles/production.css" />
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
           <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" />
