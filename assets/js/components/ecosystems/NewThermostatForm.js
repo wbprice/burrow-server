@@ -6,7 +6,7 @@ class NewThermostatForm extends Component {
 
   render() {
     return (
-      <form className={`${style.Form} pure-form pure-form-aligned`} method="post" action="/api/v1/thermostat">
+      <form className={`${style.Form} pure-form pure-form-aligned`} method="post" action="/thermostat">
         <fieldset>
           <legend>Create New Thermostat</legend>
           <input type="hidden" name="_method" value="post" />

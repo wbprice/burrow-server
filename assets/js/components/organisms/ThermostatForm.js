@@ -6,7 +6,7 @@ class ThermostatForm extends Component {
 
   render() {
     return (
-      <form className={style.form} method="post" action={`/api/v1/thermostat/${this.props.id}`}>
+      <form className={style.form} method="post" action={`/thermostat/${this.props.id}`}>
 
         <fieldset className={style.temperature}>
           <legend>Target Temperature</legend>
