@@ -1,0 +1,21 @@
+@import './../colors.scss';
+
+.Form {
+
+  fieldset {
+
+    border-bottom: 1px solid $darkblue !important;
+
+    legend {
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 2px solid $darkblue;
+    }
+
+    button {
+      background: $darkblue;
+    }
+
+  }
+
+}
