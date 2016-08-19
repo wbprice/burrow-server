@@ -11,7 +11,7 @@ class ThermostatForm extends Component {
         <fieldset className={style.temperature}>
           <legend>Target Temperature</legend>
           <input type="hidden" name="_method" value="put" />
-          <input name="temperature" type="number" value={this.props.temperature} max="99" min="68" />
+          <input name="temperature" type="number" required value={this.props.temperature} max="99" min="68" />
           <span className={style.degree}>&deg;</span>
         </fieldset>
 

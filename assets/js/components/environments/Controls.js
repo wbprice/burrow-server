@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react'
 
 import style from './../../../styles/environments/Controls.scss'
 import Thermostat from './../ecosystems/Thermostat'
+import NewThermostatForm from './../ecosystems/NewThermostatForm'
 
 class Controls extends Component {
 
@@ -9,7 +10,6 @@ class Controls extends Component {
     return (
       <section className={style.Controls}>
         {this.props.thermostats.map((thermostat, index) => {
-
           return (
             <Thermostat
               key={index}
@@ -18,6 +18,7 @@ class Controls extends Component {
               id={thermostat.id} />
           )
         })}
+        <NewThermostatForm />
       </section>
     )
   }
