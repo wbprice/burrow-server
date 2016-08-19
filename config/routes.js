@@ -32,7 +32,7 @@ module.exports = [
   {
     method: 'POST',
     path: '/api/v1/thermostat/{id?}',
-    handler: 'ThermostatController.update'
+    handler: 'ThermostatController.createOrUpdate'
   }
 
 ]
