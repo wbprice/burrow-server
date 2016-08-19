@@ -6,12 +6,12 @@ class ThermostatForm extends Component {
 
   render() {
     return (
-      <form className={style.form} method="post" action={`/api/v1/thermostat/${this.props.id}`}>
+      <form className={style.form} method="post" action={`/thermostat/${this.props.id}`}>
 
         <fieldset className={style.temperature}>
           <legend>Target Temperature</legend>
           <input type="hidden" name="_method" value="put" />
-          <input name="temperature" type="number" value={this.props.temperature} max="99" min="68" />
+          <input name="temperature" type="number" required value={this.props.temperature} max="99" min="68" />
           <span className={style.degree}>&deg;</span>
         </fieldset>
 
