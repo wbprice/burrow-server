@@ -12,11 +12,6 @@ const dbUser = process.env.PG_DATABASE_USER || 'blaine'
 const dbPass = process.env.PG_DATABASE_PASS || ''
 const dbHost = process.env.PG_DATABASE_HOST || 'localhost'
 
-console.log('dbName: ', dbName)
-console.log('dbUser: ', dbUser)
-console.log('dbPass: ', dbPass)
-console.log('dbHost: ', dbHost)
-
 module.exports = {
 
   /**

@@ -10,9 +10,14 @@ module.exports = class ViewController extends Controller {
 
   controls (request, reply) {
 
-    this.app.orm.Thermostat.findAll()
-    .then(thermostats => {
-      reply.view('Controls', {thermostats})
+    Promise.all([
+      this.app.orm.Thermostat.findAll(),
+      this.app.orm.ClimateProfile.findAll()
+    ])
+    .then(results => {
+      const thermostats = results[0]
+      const climateProfiles = results[1]
+      reply.view('Controls', {thermostats, climateProfiles})
     })
 
   }

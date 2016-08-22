@@ -18,6 +18,7 @@ module.exports = {
   packs: [
     require('trailpack-core'),
     // require('trailpack-repl'),
+    require('trailpack-bootstrap'),
     require('trailpack-router'),
     require('trailpack-hapi'),
     require('trailpack-gulp'),

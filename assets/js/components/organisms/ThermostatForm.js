@@ -15,7 +15,7 @@ class ThermostatForm extends Component {
           <span className={style.degree}>&deg;</span>
         </fieldset>
 
-        <h2>{this.props.name}</h2>
+        <input className={style.name} type="text" name="name" value={this.props.name} required />
 
         <button className="pure-button pure-button-primary">Update</button>
 
