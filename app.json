@@ -1,0 +1,32 @@
+{
+  "name": "burrow-server",
+  "scripts": {
+  },
+  "env": {
+    "PG_DATABASE_HOST": {
+      "required": true
+    },
+    "PG_DATABASE_NAME": {
+      "required": true
+    },
+    "PG_DATABASE_PASS": {
+      "required": true
+    },
+    "PG_DATABASE_USER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
