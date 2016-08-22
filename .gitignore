@@ -1,6 +1,7 @@
 .DS_STORE
-dist
 .tmp
+dist
 node_modules
 coverage
 npm-debug.log
+env-vars
