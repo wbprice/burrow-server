@@ -3,13 +3,12 @@
 const Model = require('trails-model')
 
 /**
- * @module Thermostat
- * @description Contains information about a thermostat.
+ * @module Climateprofile
+ * @description Model containing information about climate profiles.
  */
-module.exports = class Thermostat extends Model {
+module.exports = class ClimateProfile extends Model {
 
   static config () {
-    return {}
   }
 
   static schema (app, Sequelize) {
@@ -24,5 +23,4 @@ module.exports = class Thermostat extends Model {
       }
     }
   }
-
 }

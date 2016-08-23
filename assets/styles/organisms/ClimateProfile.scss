@@ -1,0 +1,23 @@
+@import './../colors';
+
+.climateProfile {
+
+  a {
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background: $darkblue;
+      color: $white !important;
+    }
+
+  }
+
+}
+
+.selected {
+  background: $darkblue !important;
+  a {
+    color: $white !important;
+  }
+}

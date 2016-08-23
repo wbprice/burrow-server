@@ -10,8 +10,6 @@ const Boom = require('boom')
 
 module.exports = class ThermostatController extends Controller {
 
-
-
   createOrUpdate (request, reply) {
 
     const id = request.params.id
@@ -20,7 +18,7 @@ module.exports = class ThermostatController extends Controller {
 
     if (request.payload['_method'] === 'put') {
       this.app.orm.Thermostat.update(
-        {temperature},
+        {name, temperature},
         {where: {id}}
       ).then(() => {
         reply().redirect('/controls')

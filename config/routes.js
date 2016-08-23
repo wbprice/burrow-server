@@ -33,6 +33,12 @@ module.exports = [
     method: 'POST',
     path: '/thermostat/{id?}',
     handler: 'ThermostatController.createOrUpdate'
+  },
+
+  {
+    method: 'GET',
+    path: '/climateprofile/select/{id}',
+    handler: 'ClimateProfileController.select'
   }
 
 ]

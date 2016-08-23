@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react'
 
 import style from './../../../styles/environments/Controls.scss'
 import Thermostat from './../ecosystems/Thermostat'
-import NewThermostatForm from './../ecosystems/NewThermostatForm'
+import ClimateProfileList from './../ecosystems/ClimateProfileList'
 import BigErrorMessage from './../molecules/BigErrorMessage'
 
 class Controls extends Component {
@@ -19,15 +19,19 @@ class Controls extends Component {
 
         {this.props.thermostats.map((thermostat, index) => {
           return (
-            <Thermostat
-              key={index}
-              name={thermostat.name}
-              temperature={thermostat.temperature}
-              id={thermostat.id} />
+            <section>
+              <Thermostat
+                key={index}
+                name={thermostat.name}
+                temperature={thermostat.temperature}
+                id={thermostat.id} />
+              <ClimateProfileList
+                temperature={thermostat.temperature}
+                climateProfiles={this.props.climateProfiles} />
+            </section>
           )
         })}
 
-        <NewThermostatForm />
       </section>
     )
   }
@@ -35,7 +39,8 @@ class Controls extends Component {
 }
 
 Controls.propTypes = {
-  thermostats: PropTypes.array
+  thermostats: PropTypes.array,
+  climateProfiles: PropTypes.array
 }
 
 export default Controls
