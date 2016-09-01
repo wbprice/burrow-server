@@ -64,4 +64,11 @@
     margin-bottom: 1em;
   }
 
+  .warning {
+    margin-top: .5em;
+    background: $red;
+    color: white;
+    padding: .5em;
+  }
+
 }
