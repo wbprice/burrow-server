@@ -39,4 +39,37 @@ module.exports = class ThermostatController extends Controller {
 
   }
 
+  findOne (request, reply) {
+
+    const id = request.params.id
+    const originIsRemote = request.query['is-remote']
+
+    return new Promise((resolve, reject) => {
+
+      // If the origin of the request is a remote, log the time so we can do
+      // some basic remote health checking.
+      if (originIsRemote) {
+        this.app.orm.Thermostat.update(
+          { lastCheckin: new Date() },
+          { where: {id}}
+        ).then(() => { resolve() })
+      }
+
+      else {
+        resolve()
+      }
+
+    })
+    .then(() => {
+      return this.app.orm.Thermostat.find({where: {id}})
+    })
+    .then(thermostat => {
+      reply(thermostat)
+    })
+    .catch(error => {
+      reply(Boom.badRequest('There was an error.  That\s all we know'))
+    })
+
+  }
+
 }

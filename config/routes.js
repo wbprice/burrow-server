@@ -37,6 +37,12 @@ module.exports = [
 
   {
     method: 'GET',
+    path: '/api/v1/thermostat/{id}',
+    handler: 'ThermostatController.findOne'
+  },
+
+  {
+    method: 'GET',
     path: '/climateprofile/select/{id}',
     handler: 'ClimateProfileController.select'
   }
