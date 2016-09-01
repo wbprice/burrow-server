@@ -24,6 +24,7 @@ class Controls extends Component {
                 key={index}
                 name={thermostat.name}
                 temperature={thermostat.temperature}
+                lastCheckin={thermostat.lastCheckin}
                 id={thermostat.id} />
               <ClimateProfileList
                 temperature={thermostat.temperature}

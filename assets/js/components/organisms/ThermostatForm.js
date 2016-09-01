@@ -1,10 +1,18 @@
 import React, { PropTypes, Component } from 'react'
+import moment from 'moment'
 
 import style from './../../../styles/organisms/ThermostatForm.scss'
 
 class ThermostatForm extends Component {
 
+  getLastRemoteCheckin() {
+    return moment().diff(this.props.lastCheckin, 'minutes')
+  }
+
   render() {
+
+    const minutesSinceLastCheckin = this.getLastRemoteCheckin.call(this)
+
     return (
       <form className={style.form} method="post" action={`/thermostat/${this.props.id}`}>
 
@@ -19,6 +27,13 @@ class ThermostatForm extends Component {
 
         <button className="pure-button pure-button-primary">Update</button>
 
+        {
+          minutesSinceLastCheckin > 5 &&
+          <div className={style.warning}>
+            <span>{"The remote hasn\'t checked in recently."}</span>
+          </div>
+        }
+
       </form>
     )
 
@@ -29,7 +44,8 @@ class ThermostatForm extends Component {
 ThermostatForm.propTypes = {
   id: PropTypes.number,
   temperature: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  lastCheckin: PropTypes.string
 }
 
 export default ThermostatForm

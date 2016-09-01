@@ -12,6 +12,7 @@ class Thermostat extends Component {
         <ThermostatForm
           id={this.props.id}
           name={this.props.name}
+          lastCheckin={this.props.lastCheckin}
           temperature={this.props.temperature} />
       </section>
     )
@@ -22,6 +23,7 @@ class Thermostat extends Component {
 Thermostat.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
+  lastCheckin: PropTypes.string,
   temperature: PropTypes.number
 }
 
