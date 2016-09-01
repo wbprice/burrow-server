@@ -21,6 +21,9 @@ module.exports = class Thermostat extends Model {
       temperature: {
         type: Sequelize.INTEGER,
         defaultValue: 72
+      },
+      lastCheckin: {
+        type: Sequelize.DATE
       }
     }
   }
