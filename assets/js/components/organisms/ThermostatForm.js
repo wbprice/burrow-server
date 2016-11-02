@@ -14,7 +14,11 @@ class ThermostatForm extends Component {
     const minutesSinceLastCheckin = this.getLastRemoteCheckin.call(this)
 
     return (
-      <form className={style.form} method="post" action={`/thermostat/${this.props.id}`}>
+      <form
+        title={`The remote last checked in ${minutesSinceLastCheckin} minutes ago.`}
+        className={style.form}
+        method="post"
+        action={`/thermostat/${this.props.id}`}>
 
         <fieldset className={style.temperature}>
           <legend>Target Temperature</legend>
@@ -23,7 +27,10 @@ class ThermostatForm extends Component {
           <span className={style.degree}>&deg;</span>
         </fieldset>
 
-        <input className={style.name} type="text" name="name" value={this.props.name} required />
+        <input
+          className={style.name}
+          type="text" name="name"
+          value={this.props.name} required />
 
         <button className="pure-button pure-button-primary">Update</button>
 
