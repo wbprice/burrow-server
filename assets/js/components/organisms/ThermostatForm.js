@@ -28,7 +28,7 @@ class ThermostatForm extends Component {
         <button className="pure-button pure-button-primary">Update</button>
 
         {
-          minutesSinceLastCheckin > 5 &&
+          minutesSinceLastCheckin > 15 &&
           <div className={style.warning}>
             <span>{"The remote hasn\'t checked in recently."}</span>
           </div>
